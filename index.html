@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alcapay</title>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="AboutPage.css" />
+    <link rel="stylesheet" href="HomePage.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="BankPage.css" />
+    <link rel="stylesheet" href="animation.css"/>
+
+    <!-- Rubik font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+CU:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <section class="home-page">
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <img src="images/AlcapayLogo.png" alt="alcapay-logo">
+        <div class="top-nav">
+          <h1 class="home-btn">HOME</h1>
+          <h1 class="log-in-btn">LOG IN</h1>
+          <h1 class="about-btn">ABOUT</h1>
+          <button class="download-btn">DOWNLOAD NOW</button>
+        </div>
+      </div>
+
+      <!-- CONTENT BAR -->
+      <div class="content-bar">
+        <!-- Left side -->
+        <div class="design-side">
+          <img class="card-design" src="images/card.png" />
+          <h1 class="design-msg">ALCAPAY FOR YOU.</h1>
+        </div>
+        <!-- Right side -->
+        <div class="welcome-side">
+          <h1>A BANKING APP FOR EVERYONE!</h1>
+          <button class="create-acc">Create Account</button>
+
+        </div>
+        <!-- Create account side -->
+        <div class="create-acc-side hide">
+          <div class="create-acc-modal">
+            <h1>CREATE ACCOUNT</h1>
+            <form class="create-acc-form">
+              <div class="complete-name">
+                <input
+                  type="text"
+                  id="first-name"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  id="last-name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="identity">
+                <input
+                  type="date"
+                  id="date"
+                  placeholder="Date"
+                  maxlength=""
+                  required
+                />
+                <select id="nationality">
+                  <option value="USA">USA</option>
+                  <option value="PH">PH</option>
+                </select>
+              </div>
+
+              <input type="email" id="email" placeholder="Email" />
+              <input
+                type="number"
+                id="pin"
+                placeholder="Enter pin"
+                minlength="4"
+                maxlength="6"
+                required
+              />
+              <input type="submit" id="submit" value="CREATE" />
+              <h1 class="Hello">Your automated Id number will be:<span class="id-number"></span></h1>
+            </form>
+            <button class="close-create-acc"></button>
+          </div>
+        </div>
+
+        <!-- LOG IN SIDE -->
+        <div class="log-in-side hide">
+          <h1>Login to Your Account</h1>
+          <form class="log-in-form">
+            <input
+              type="number"
+              id="log-id-number"
+              placeholder="ID Number"
+              required
+            />
+            <input
+              type="number"
+              id="log-pin"
+              placeholder="Pin"
+              min="1000"
+              max="99999"
+              required
+            />
+            <input type="submit" id="log-submit" value="           " />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- bank Page -->
+    <section class="bank-page hide">
+      <!-- Top Bar of bank page -->
+      <div class="top-bar-bank">
+        <img src="images/AlcapayLogo.png" alt="alcapay-logo">
+        <div class="welcome-msg"><h1>Welcome back, <span class="userName">Ian</span></h1>       
+           <h4>Id Number: <span class="Id-number">2323</span></h4></div>
+
+
+        <div class="top-nav-bank">
+          <h1 class="inbox-nav">INBOX</h1>
+          <h1 class="transaction-nav">TRANSACTIONS</h1>
+          <h1 class="log-out-nav">LOG OUT</h1>
+        </div>
+      </div>
+      <!-- Content of the bank like the transfer, balance, and loan -->
+      <div class="content-bank">
+        <div class="operation-side">
+          <!--  Contents like the balance, date-->
+          <div class="money-part">
+            <h1>AVAILABLE BALANCE</h1>
+            <h1>
+              As of <span class="date-balance">Wednesday 12/23/2003</span>
+            </h1>
+            <h1 class="balance">$12,000</h1>
+          </div>
+          <!--  Operations like the transfer money, borrow and more-->
+          <div class="operation-part">
+            <!--  SEND MONEY-->
+            <div>
+              <img src="images/sendMoney.png" />
+              <form class="send-money-form">
+                <input type="number" id="send-id" placeholder="Reciever's ID" />
+                <input
+                  type="number"
+                  id="send-amount"
+                  placeholder="Amount"
+                  min="6"
+                  max="99999"
+                />
+                <input type="submit" id="send-btn" value="  " />
+              </form>
+              <h1>SEND MONEY</h1>
+            </div>
+            <!--  WITDHRAW MONEY-->
+            <div>
+              <img src="images/withdrawMoney.png" />
+              <form class="withdraw-money-form">
+                <input type="number" id="withdraw-id" placeholder="Your ID" />
+                <input
+                  type="number"
+                  id="withdraw-amount"
+                  placeholder="Amount"
+                  min="6"
+                  max="99999"
+                />
+                <input type="submit" id="withdraw-btn" value="  " />
+              </form>
+              <h1>WITHDRAW MONEY</h1>
+            </div>
+            <!--  BORROW MONEY-->
+            <div>
+              <img src="images/borrowMoney.png" />
+              <form class="borrow-money-form">
+                <input type="number" id="borrow-amount" placeholder="Amount" />
+                <input type="submit" id="borrow-btn" value="  " />
+              </form>
+              <h1>BORROW MONEY</h1>
+            </div>
+            <!--  CARD MONEY-->
+            <div>
+              <img src="images/cardsMoney.png" />
+
+              <h1>CARD MONEY</h1>
+            </div>
+          </div>
+        </div>
+        <!--  INfo like the inbox and transaction-->
+        <div class="info-side ">
+          <!--  Transaction mode-->
+          <section class="transaction-mode hide">
+            <div class="top-info-bar">
+              <h1>Transactions</h1>
+              <button class="sort-transact-btn">SORT</button>
+            </div>
+            <div class="movements">
+                            <!-- EACH MOVEMENTS -->
+              <div class="movement-row hide">
+                <h1 class="movement-date">TODAY</h1>
+                <h1 class="movement-status color-Widthraw">DEPOSIT</h1>
+                <h1 class="movement-amount">$10000</h1>
+              </div>
+            </div>
+            
+
+
+          </section>
+           <!--  Inbox mode-->
+          <section class="inbox-mode hide ">
+            <div class="top-info-bar">
+              <h1>Inbox</h1>
+              <button class="sort-inbox-btn">SORT</button>
+            </div>
+            <div class="inboxes">
+
+              <!-- <div class="inbox-msg-box">
+                <h1 class="transaction-method-msg"> Forwarded Money</h1>
+                <p class="msg-text">Sure! Here's a non-copyrighted paragraph:
+                  "Sunsets are a daily reminder of nature's beauty, painting the sky with hues of orange, pink, and purple. "</p>
+                  <button class="copy-message-btn"></button>
+                  <h2><span class="msg-date"> 12/10/2003</span></h2>
+              </div> -->
+              
+  
+            </div>
+          
+          </section>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--  Log out option-->
+      <div class="log-out-modal hide">
+        <h1>Log out</h1>
+        <form>
+          <input type="number" id="log-out-id" placeholder="ID number" >
+          <input type="number" id="log-out-pin" placeholder="Pin" max="9999" min="4">
+          <input type="submit" id="log-out-submit" value=" ">
+        </form>
+        <button class="log-out-btn"></button>
+      </div>
+
+      <!-- TImeout expires -->
+      <div class="timeout-modal hide">
+        <h1>You will be signed out soon</h1>
+        <h3>To protect your account information, you will be signed out in <span class="timer-expire">5 minutes</span></h3>
+        <button class="stay-signed-in-btn">Stay signed in</button>
+        
+
+      </div>
+
+    </section>
+
+    <div class="layout"></div>
+    <script src="scrpt.js"></script>
+  </body>
+</html>

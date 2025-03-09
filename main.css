@@ -1,0 +1,30 @@
+* {
+  font-family: "Rubik", roboto;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/bg5.jpg);
+  backdrop-filter: blur(5px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+ }
+:root {
+  --bg-color: #252525;
+}
+.layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000000dd;
+  backdrop-filter: blur(10px);
+}

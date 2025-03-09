@@ -1,0 +1,330 @@
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: auto;
+}
+/* TOP BAR------------------------------------------------------------------- */
+.top-bar {
+  background-color: rgba(255, 255, 255, 0);
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar img {
+  width: 80px;
+  height: 80px;
+  background-image: url(images/AlcapayLogo.png);
+}
+.top-nav {
+  margin-right: 2%;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top-nav button {
+  height: 90%;
+  width: 30%;
+  padding: 15px;
+  align-self: center;
+  border-radius: 15px;
+  background-color: rgb(255, 247, 0);
+  border: none;
+  font-weight: bold;
+
+  color: black;
+  font-size: 12px;
+
+  transition: background-color 0.2s;
+}
+.top-bar h1:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+.top-nav button:hover {
+  background-color: rgb(255, 187, 0);
+}
+.home-btn,
+.log-in-btn,
+.about-btn,
+.download-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* CONTENT BAR------------------------------------------------------------------- */
+.content-bar {
+  background-color: rgba(255, 255, 255, 0);
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.design-side,
+.welcome-side {
+  flex: 1;
+  position: relative;
+}
+.card-design {
+  position: absolute;
+  height: 70%;
+}
+.design-msg {
+  font-size: 50px;
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  color: rgba(0, 0, 0, 0.115);
+  text-shadow: 1px 1px 1px rgba(88, 88, 88, 0.5);
+}
+
+.welcome-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-side h1 {
+  text-align: center;
+  font-size: 65px;
+  color: rgba(255, 255, 255, 0.783);
+}
+.create-acc {
+  color: black;
+  padding: 20px 10%;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2.s, border 0.2s;
+}
+.create-acc:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
+}
+.welcome-side h3 {
+  font-size: 19px;
+  cursor: pointer;
+}
+
+/* Create acc side------------------------------------------------------------------- */
+.create-acc-side {
+  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.create-acc-modal {
+  background: radial-gradient(
+    circle at top left,
+    rgb(37, 36, 36),
+    rgb(5, 5, 5)
+  );
+  box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.9);
+  height: 600px;
+  width: 500px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+.close-create-acc {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  background-image: url(images/closeBtn.png);
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+
+  cursor: pointer;
+}
+.create-acc-modal h1 {
+  margin: 5% auto;
+  margin-top: 8%;
+  margin-bottom: 0;
+  height: 8%;
+  font-size: 32px;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.create-acc-modal form {
+  margin: 7% 10%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.create-acc-modal form input:not(#first-name, #last-name) {
+  margin-top: 7%;
+}
+.create-acc-modal form input:not(#submit) {
+  color: white;
+  height: 50px;
+  font-size: 19px;
+
+  background-color: rgba(132, 132, 132, 0);
+
+  border: none;
+  border: none;
+  border-bottom: 2px solid white;
+}
+.identity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#nationality {
+  width: 120px;
+  height: 40px;
+  padding-bottom: 4px;
+
+  color: rgb(255, 255, 255);
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 19px;
+  font-weight: 400;
+  align-self: flex-end;
+}
+.id-number {
+  color: yellow;
+  font-weight: 700;
+}
+.create-acc-form h1 {
+  font-size: 13px;
+  word-spacing: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  margin-top: 5%;
+  margin-left: 0;
+}
+#nationality:focus {
+  outline: none;
+}
+#nationality option {
+  color: black;
+}
+.create-acc-modal form input:focus {
+  outline: none;
+  border-top: none;
+}
+.create-acc-modal form input::-webkit-inner-spin-button,
+.create-acc-modal form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#submit {
+  padding: 15px 20px;
+  font-size: 23px;
+  color: white;
+  background: radial-gradient(circle at top left, rgb(16, 15, 15) 10%, black);
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  right: 20%;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: "rubik";
+
+  transition: padding 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#submit:hover {
+  box-shadow: -5px -5px 20px 5px rgba(0, 0, 0, 0.5);
+  padding: 16px 21px;
+}
+#submit:active {
+  opacity: 0.8;
+}
+
+.complete-name {
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  width: 100%;
+}
+.complete-name input {
+  width: 100%;
+}
+
+/* LOG IN SIDE---------------------------------------------------------------------------- */
+.log-in-side {
+  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.log-in-side h1 {
+  font-size: 55px;
+}
+.log-in-form {
+  height: 10%;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.log-in-form input {
+  height: 90%;
+  color: black;
+  font-size: 23px;
+  border: none;
+}
+#log-submit {
+  height: 100%;
+  width: 12%;
+  margin-left: 0;
+  border-radius: 20px;
+  background-image: url(images/send.png);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+
+  cursor: pointer;
+}
+#log-id-number,
+#log-pin {
+  flex: 1;
+  margin-right: 3%;
+  padding-left: 3%;
+  border-radius: 20px;
+}
+
+.log-in-form input::-webkit-inner-spin-button,
+.log-in-form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.log-in-form input:focus {
+  outline: none;
+  border-top: none;
+}
+
+.hide {
+  display: none;
+}

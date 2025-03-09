@@ -1,0 +1,35 @@
+/* HOMEPAGE ANIMATION */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+.fadeOut {
+  animation: fadeOut 0.2s ease forwards;
+}
+.card-design {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+.design-msg {
+  opacity: 0;
+  animation: fadeIn 2s 1s ease forwards;
+}
+.welcome-side {
+  opacity: 0;
+  animation: fadeIn 1s 2s ease forwards;
+}
